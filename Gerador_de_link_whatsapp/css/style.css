@@ -1,0 +1,26 @@
+a#btn {
+    color: white;
+    margin-top: 50x;
+}
+
+input.input {
+    margin-bottom: 10px;
+}
+
+small.label {
+    text-align: right;
+}
+
+.jumbotron {
+    padding: 30px;
+    /* fills out the jumbotron */
+    background-color: rgb(230, 230, 230);
+}
+
+div.container {
+    padding-top: 120px;
+}
+
+textarea {
+    width: 100%;
+}

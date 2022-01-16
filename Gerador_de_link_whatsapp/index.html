@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Gerador de Link Whatsapp</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: rgb(242, 242, 242);
+        }
+    </style>
+
+    <form id="formulario">
+        <div class="container">
+            <div class="jumbotron">
+                <hr>
+                <h3>Gerador de Link Whatsapp</h3><br>
+                <small class="label">Insira o nº do WhatsApp Ex: 85 9 9660-5866&nbsp;&nbsp;&nbsp|</small> &nbsp;&nbsp;
+                <small class="label">Insira o nº do Código do Pais Ex: 55</small>
+                <input class="input" placeholder="DDI" maxlength="5" type="number" id="ddi" required>
+                <small class="label">Insira o nº do DDD Ex: 64</small>
+                <input class="input" placeholder="DDD" maxlength="3" type="number" id="ddd" autocomplete="off">
+                <input class="input-group" type="number" placeholder="Numero de Telefone" id="numero" name="numero" autocomplete="off"></input><br>
+                <textarea rows="5" class="form-floating" placeholder="Insira sua mensagem" type="textarea" maxlength="190" autocomplete="off" id="msg"></textarea><br><br>
+                <button type="button" target="_newblanck" class="btn btn-success" value="Abrir Whatsapp" id="bnt" onclick="window.location = generatedLink">Abrir Whatsapp</button>
+                <hr>
+                <p>Copyright © 2022 Kaic Leonardo - Todos os direitos reservados
+                    <!--https://github.com/kaicrodrigues-->
+                </p>
+
+
+            </div>
+        </div>
+
+    </form>
+
+    <!-- Script -->
+
+    <script>
+        var form = document.getElementById('formulario');
+        var numeroDdi = document.getElementById('ddi').value;
+        var numeroDdd = document.getElementById('ddd').value;
+        var numero = document.getElementById('numero').value;
+        var msg = document.getElementById('msg').value;
+        var generatedLink = `https://api.whatsapp.com/send?phone=+ + ${numeroDdi.value} + ${numeroDdd.value} + ${numero.value}  + &text=  + ${msg.value} `;
+
+
+        form.addEventListener('submit', function(e) {
+
+        });
+        document.getElementById('bnt')
+        $('#bnt').click(function() {
+            e.preventDefault();
+            window.location = (generatedLink)
+        });
+    </script>
+
+
+
+</body>
+
+</html>
