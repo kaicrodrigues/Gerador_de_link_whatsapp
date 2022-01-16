@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Link Para WhatsApp</title>
+    <link rel="stylesheet" href="./src/app.css">
+    <link rel="shortcut icon" href="./whatsapp.svg" type="image/x-icon">
+</head>
+
+<body>
+    <main class="app">
+        <img src="./img/whatsapp.svg">
+        <h3>Gerador de link para o WhatsApp</h3>
+
+        <!-- Formulário -->
+
+        <form name="form" action="#" method="#">
+            <p class="user-message display-none"></p>
+            <div class="initial">
+
+                <div class="input-group">
+                    <label for="phone">Número do whatsapp</label>
+                    <div>
+                        <img src="./img/phone.svg" alt="telefone">
+                        <input type="number" inputmode="numeric" id="phone" name="phone" minlength="11" autofocus placeholder="00 0 0000 0000" required />
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="message">Mensagem</label>
+                    <div>
+                        <img src="./img/chat.svg" alt="chat">
+                        <input id="message" type="text" name="message" />
+                    </div>
+                </div>
+
+                <footer>
+                    <button type="submit" name="submit" class="generate" disabled>Criar link</button>
+                </footer>
+            </div>
+
+
+            <div class="finished d-none">
+                <div class="input-group">
+                    <label for="link">Seu link</label>
+                    <div>
+                        <img src="./img/link.svg" alt="Link">
+                        <input id="link" type="text" name="link" />
+                    </div>
+                </div>
+                <footer>
+                    <button type="button" name="copy" class="copy">Copiar</button>
+                    <button type="button" name="new" class="new">Novo</button>
+                    <button type="button" name="open" class="open">abrir chat</button>
+                </footer>
+            </div>
+        </form>
+
+        <section class="how-to-use">
+            <h3>Como utilizar</h3>
+            <ul class="steps">
+                <li>
+                    <span class="index">1 -</span>
+                    <span class="text">Insira o nº do WhatsApp sem hífem ou parênteses</span>
+                </li>
+                <li>
+                    <span class="index">2 -</span>
+                    <span class="text">Escreva uma mensagem para começar a conversa (não obrigatório)</span>
+                </li>
+                <li>
+                    <span class="index">3 -</span>
+                    <span class="text">Clique no botão "GERAR LINK"</span>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <script type="module" src="./src/main.js"></script>
+
+    <!-- *projeto desenvolvido baseado em um projeto existente -->
+
+    <nav class="source-code">
+        <a href="https://github.com/kaicrodrigues/Gerador_de_link_whatsapp" target="_blank">código fonte</a>
+    </nav>
+</body>
+
+</html>
